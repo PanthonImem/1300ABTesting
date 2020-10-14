@@ -50,6 +50,14 @@ header {
   color: #DF0000;
 }
 
+.fa-circle {
+  color: blue;
+}
+
 .red-cart {
 	color: #DF0000;
+}
+
+.blue-cart {
+	color:blue;
 }
