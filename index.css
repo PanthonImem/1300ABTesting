@@ -3,7 +3,7 @@
 @media screen and (max-width : 2000px)
 {
   body {
-    background-color: beige;
+    background-color: lightgoldenrodyellow;
     font-family: 'Piazzolla', serif;
     font-size: 20px;
   }
@@ -11,7 +11,7 @@
 @media screen and (min-width : 2000px)
 {
   body {
-    background-color: beige;
+    background-color: lightgoldenrodyellow;
     font-family: 'Piazzolla', serif;
     font-size: 1.2vw;
   }
@@ -21,7 +21,9 @@
 
   img {
     border-radius: 2px;
-    padding: 0 0px 20px;
+    border-style:solid;
+    border-color:cadetblue;
+    padding: 0 0px 0px;
   }
   h3{
     margin-top: 5px;

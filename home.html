@@ -23,6 +23,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
+    padding-top: 500px;
     padding: 0 0px 15px;
   }
   .text-nospace {
@@ -56,7 +57,7 @@
 </style>
 <html>
   <head>
-    <title> Responsive Redesign: MDCU Library</title>
+    <title> ABTesting: Which Cactus Shop Design Should We Use?</title>
     <link rel="stylesheet" href="index.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -65,217 +66,111 @@
   <body> 
     <!-- TODO: put your HTML code here! -->
     <div class = paragraph>
-    <h1 class = text>  Responsive Redesign: MDCU Library </h1> 
+    <h1 class = text>  ABTesting: Which Cactus Shop Design Should We Use? </h1> 
     <i class = text> This webpage is an assignment for my class CSCI1300: UI/UX at Brown University. </i>
     </div>
     <div class = paragraph>
       <text class = text>
-        For this assignment, I will be picking a website with some problems and propose a design that fixes those problem.
+        For this assignment, I will be editing a (fake) cactus selling website into two version, and then use statistics
+        to analyze business metrics like return rate and time-to-complete-task to identify if the new version is better. 
       </text>
 
       <text class = text>
-        The website we'll be looking at today is linked down below. 
+        The cactus shop website we'll be looking at today is linked down below. 
       </text>
 
-      <a href="http://library.md.chula.ac.th/">  Library Website of Medical Department, Chulalongkorn University</a>
+      <a href="https://murmuring-ocean-06253.herokuapp.com/">  My CACTUS SHOP Website</a>
 
       <text class = text>
-        The website looks like this.
-      </text>
-
-      <img src="images/general.png" width= "100%" height= "auto">
-
-      <text class = text>
-        This is a real and functional website although we can clearly see already that 
-        there is much work to be done to clean up this website. 
-        I got this website from my sister, who is a frequent user of the site when I asked her to 
-        suggest a bad site UI-UX-wise.  
+        There are two versions of the site.
       </text>
 
       <text class = text>
-        Please understand that there are over 150 links and 30++ photos in this website so I will not be able
-        to replicate this site completely. In the spirit of responsive redesign, I will keep all the main components 
-        but will only include 3 example links for each component out of 20++ as seen in the real site. 
+       <b> Version A</b>
       </text>
+      <img src="images/sitevA.png" width= "100%" height= "auto">
+      <text class = text>
+        <b> Version B </b>
+      </text>
+      <img src="images/sitevB.png" width= "100%" height= "auto">
+      
 
       <text class = text>
-        Another point to note is that despite looking like this, this website is actually updated almost 
-        daily by a team of ~20 librarians, and so the components on the page on your date of access may differ 
-        than the screenshot here a bit, but the overall should look the same. 
+        In version A, which is the original site, there is a lot of space on the right.
+        So in version B, I keep the same style but center most components and change the shopping cart color from red to a 
+        friendlier blue. In the next section I will discuss the hypothesis about these changes. 
       </text>
+
+
     </div>
 
     <div class = paragraph>
-      <h2 class = text> What's the Usability Problem with this site</h2>
+      <h2 class = text> Hypotheses</h2>
       <text class = text>
-       Here I will show the many problems that make this site hard to use. 
-      </text>
-
-      <b class = text> 1. Lack of website structure</b>
-      <text class = text>
-        The structure of this site isn't very clear. We can notice that it is roughly divided into 
-        2 parts: Top and Bottom. The top holds announcements, search bar, contact info, and also login panel. 
-        The bottom contains 4 columns of resources and miscellaneous guides. The problem here is that the structure 
-        isn't very clear and there is no good way to identify where the item the user is looking for is located on the page.
-       </text>
-
-       <img src="images/general.png" width= "100%" height= "auto">
-
-       <b class = text> 2. Very clutterd</b>
-      <text class = text>
-        There are so many information on this page. Same as the lack of structure, this makes
-        looking for something on this page very hard.
-       </text>
-
-       <b class = text> 3. Unclear Image Link </b>
-       <text class = text>
-         Some of the images on the site are links, others are not. There is no way to tell which one is a link and which one is not. 
-        </text>
-        <div>
-        <img src="images/imgnotlink.png" class = myimg>
-        <img src="images/imgislink.png" class = myimg>
-        </div>
-
-        <b class = text> 4. Lack of visual style </b>
-        <text class = text>
-          While overall, this website is following some universal style like underlining and coloring links blue,
-          there exists many outliers where the the color used simply did not make any sense. See this image below.
-          It is unclear what the purpose of using the color green and orange here is.
-         </text>
-        
-         <img src="images/randomcolor.png" width= "80%" height= "auto">
-
-         <b class = text> 5. No Responsiveness </b>
-        <text class = text>
-         The website is not responsive at all. Here is how it looks on a phone screen.
-         </text>
-         <img src="images/iphone.png" width= "327" height= "auto">
-         <text class = text>
-          We can see that this is pretty much unreadable and hence unusable. 
-          </text>
-
-          <b class = text> 6. Not very accessible as evaluated by WAVE</b>
-        <text class = text>
-        Web Accessibility Evaluation Tool WAVE by WebAIM suggests that there are 53 errors, 21 contrast errors,
-        and 42 alerts. Upon manual review, a lot of these are problems on the coding side(e.g. missing description text)
-        but nevertheless we will aim to satisfy WAVE as much as possible in our redesign.
-    </div>
-  
-    <div class = paragraph>
-      <h2 class = text>Prototyping the Fix: Low-fi Prototypes</h2>
-      <text class = text>
-        It is clear that almost every aspect of this website can be improved, but due to time limit, I will
-        places a major emphasis on the biggest problem this site has: lack of structure. 
-      </text>
-
-      <text class = text>
-        To struturize this site, we must first group similar components together.
-        I found that most components fall under the following categories
-      </text>
-      <text class = text>
-        <ol>
-          <li> Web Title, Logo, and Contact Info</li>
-          <li> Announcement </li>
-          <li> Secure Area Login </li>
-          <li> Search Bar </li>
-          <li> Resources </li>
+       For this fake cactus shop, we care about two metrics:
+       <ol>
+         <li> Return Rate: The fraction of users who return to the shop after completing purchase/li>
+         <li> Time-to-complete-task: The amount of time between user's page load time and last action</li>
         </ol>
-        Now we continue to building our low-fi prototypes.
       </text>
-      <h2>The Low-fi Prototypes</h2>
-      <img src="images/lofi1.png" style = 'width:70%'>
-      <img src="images/lofi2.png" style = 'width:70%'>
-      <img src="images/lofi3.png" style = 'width:70%'>
 
-      <h2>Lo-fi: How this Fixes our Problems</h2>
       <text class = text>
-      I will go through our listed problem one by one and explain how I fix this website
-      <ol>
-        <li> <b>Lack of structure</b> <br> 
-        The redesigned web is partitioned into clear region.
-        The placement of search bar, login panel etc. tries to mimic
-        the placement of other website on the internet so that users can find them easily. 
-        Elements from previous sites are also organized into hierarchy so that users can find 
-        any element much easier.
-        </li>
-        <li> <b>Clutterness</b> <br> 
-        How do we keep many information without overwhelming visitors?<br>
-        By organizing information into hierarchy and hiding the specifics at first!<br>
-        This is done through using collapsible panels and drop-down menu, so users can still 
-        access any element by clicking on the related option but not overwhelmed by hundreds of other elements. 
-        </li>
-
-        <li> <b>Unclear Image Link </b> <br> 
-          This is handled by the reorganization of any announcement-related elements into the 
-          announcement <b>slideshow</b>. The image is also a link to related announcement and 
-          the raised border help makes it clearer. 
-        </li>
-
-        <li> <b>Lack of visual style </b> <br> 
-        This is handled by introducing clear color scheme blue(lightblue, lightcyan)/grey(#333) tone
-        and reusing existing elements like dropdown/collapsible panels.
-        </li>
-
-        <li> <b>No Responsiveness </b> <br> 
-          This is handled by using flex-box in implementation! The size of 
-          almost every single element in the website is also made to be in relative units,
-          so no matter how big your screen is the website will look okay on your screen.
-          For smaller screens like Ipad/Phone, a CSS-condition is also applied to make 
-          the size of everything scale better!
-        </li>
-        <li> <b> Bonus: Mobile Design </b> <br> 
-          The relatively enlarged buttons and font on mobile is intentional. The users of this site 
-          are doctors, many of whom are old and has presbyopia(long-sighted-ness), and so it is necessary 
-          that all elements here are relatively large. This is less true for Ipad and larger screens. 
-        </li>
-
-      </ol>
+        <b> Return Rate Hypotheses</b>
       </text>
+      <div class = subparagraph>
+        <text class = text>
+          <b>Null Hypothesis:</b> There is no statistically significant difference in the return rate of version A and version B. <br>
+          <b>Alternative Hypothesis:</b> Version A has higher return rate than version B. 
+        </text>
+
+        <text class = text>
+          <b> Return Rate Hypotheses Explanation</b>
+          The alternative hypothesis suggests that version A has higher return rate than version B because some users,
+          especially those taking this class, might be curious to see what version B looks like and hence the expected higher return rate.
+          (I know that this is not related to our cactus business but it's the truth...)
+        </text>
+      </div>
+      <text class = text>
+        <b> Time-to-complete-task Hypotheses</b>
+      </text>
+      <div class = subparagraph>
+        <text class = text>
+          <b>Null Hypothesis:</b> There is no statistically significant difference in the time-to-complete-task of version A and version B. <br>
+          <b>Alternative Hypothesis:</b> Version B has, on average, less time-to-complete-task than version A.
+        </text>
+
+        <text class = text>
+          <b> Return Rate Hypotheses Explanation</b>
+          The alternative hypothesis suggests that version B has lower time-to-complete-task than version B because the elements
+          of the page is more centered. Most people keep their cursor near the center of the page and so it should be faster to click
+          on version B. 
+        </text>
+      </div>
     </div>
     <div class = paragraph>
-      <h2>Hi-fi: The Redesign</h2>
+      <h2 class = text style = 'padding: 0 0 0px; margin = 10px;'>Data Collection</h2>
       <text class = text>
-        The Redesign looks like this:
-      </text>
-      Laptop
-      <img src="images/hifi1.png" class = myimg3 style = 'width:70%'>
-      Ipad
-      <img src="images/hifi2.png" class = myimg3 style = 'width:35%'>
-      Phone
-      <img src="images/hifi3.png" class = myimg3 style = 'width:20%'>
-      <text class = text>
-        Here's with annotation
-      </text>
-      <img src="images/hifiannot1.png" class = myimg3 style = 'width:80%'>
-      <img src="images/hifiannot2.png" class = myimg3 style = 'width:80%'>
-      <img src="images/hifiannot3.png" class = myimg3 style = 'width:80%'>
+      Unfortunately, some of the data are loss before the heroku 1500 latest log is discovered, and so part of the log 
+      is lost forever. The log used in calculation is concatenated from several smaller logs obtained at different time.
 
-      <text class = text>
-        The overall structure is straightforwardly containers stacking vertically 
-        inside a flex-box. Some of the containers might have horizontal alignment for 
-        wider screen but should shift to vertical alignment on smaller screens to get more space.
+      Most of the testing users are from cs1300 lab or piazza post, and so they are aware that there exists different versions of the interface.
 
-        Drop-down menu, slideshow, and expansible/collapsible panel should toggle on click.
+      All data cleaning and calculation is done in python using Numpy and Pandas. <br>
+      <a href = https://github.com/PanthonImem/1300ABTesting/blob/master/ABAnalysis.ipynb>Link to cleaning/calculation notebook</a>
       </text>
-    
-    </div>
-    <div class = paragraph>
-      <h2 class = text style = 'padding: 0 0 0px; margin = 10px;'>Style Guide</h2>
-      <text class = text>
-        Below is the style guide for this site:
-      </text>
-      <img src="images/styleguide.png" style = 'width:70%'>
     </div>
 
     <div class = paragraph>
       <text class = text>
-      <h2 class = text style = 'padding-bottom: 10px'>Final Webpage</h2>
-        Below is the style guide for this site:
+      <h2 class = text style = 'padding-bottom: 10px'>Result and Analysis</h2>
+        The following infographic shows our result.
       </text>
-      <a href="https://agile-plains-75457.herokuapp.com/" imageanchor="1">
-        Here is the final MDCU Library Webpage<br>
-      </a>
-      <img src="images/finalweb.png" style = 'width:70%'>
+
+      <img src="images/info1.png" style = 'width:70%'>
+      <img src="images/info2.png" style = 'width:70%'>
+      <img src="images/info3.png" style = 'width:70%'>
+      <img src="images/info4.png" style = 'width:70%'>
+
       <text class = text>
        <b>Observation</b>
         <ul>
