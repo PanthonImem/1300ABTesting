@@ -109,7 +109,7 @@
       <text class = text>
        For this fake cactus shop, we care about two metrics:
        <ol>
-         <li> Return Rate: The fraction of users who return to the shop after completing purchase/li>
+         <li> Return Rate: The fraction of users who return to the shop after completing purchase</li>
          <li> Time-to-complete-task: The amount of time between user's page load time and last action</li>
         </ol>
       </text>
@@ -141,18 +141,17 @@
 
         <text class = text>
           <b> Return Rate Hypotheses Explanation</b>
-          The alternative hypothesis suggests that version B has lower time-to-complete-task than version B because the elements
+          The alternative hypothesis suggests that version B has lower time-to-complete-task than version A because the elements
           of the page is more centered. Most people keep their cursor near the center of the page and so it should be faster to click
           on version B. 
         </text>
       </div>
     </div>
     <div class = paragraph>
-      <h2 class = text style = 'padding: 0 0 0px; margin = 10px;'>Data Collection</h2>
+      <h2 class = text style = 'padding: 0 0 0px; margin: 10px;'>Data Collection</h2>
       <text class = text>
-      Unfortunately, some of the data are loss before the heroku 1500 latest log is discovered, and so part of the log 
+      Unfortunately, some of the data are loss before the heroku 1500 latest log bug is discovered, and so part of the log 
       is lost forever. The log used in calculation is concatenated from several smaller logs obtained at different time.
-
       Most of the testing users are from cs1300 lab or piazza post, and so they are aware that there exists different versions of the interface.
 
       All data cleaning and calculation is done in python using Numpy and Pandas. <br>
